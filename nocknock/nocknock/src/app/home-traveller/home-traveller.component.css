@@ -1,0 +1,104 @@
+.header-wrapper{
+    position: relative;
+    height: 0;
+    z-index: 1;
+}
+
+.page-content{
+    /* margin-top: -103px; */
+}
+
+.top-red-sticker{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: 1;
+    margin-left: -98px;
+}
+.left-container{
+    /* margin-top: 250px; */
+    position: relative;
+    top: 50vh;
+    margin-top: -122px;
+}
+.text-detail{
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    padding-right: 15px;
+}
+
+.text-detail .text{
+    font-size: 50px;
+    color: #fff;
+    margin-left: 30%;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.text-detail img{
+    float: right;
+    position: relative;
+    right: 50px;
+}
+
+.right-container{
+    position: absolute;
+    right: 0;
+    width: 50%;
+}
+
+.right-container .right-bg-image{
+    background-image: url('../../assets/images/never-stop-exploring-with-cup.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* margin-right: -15px; */
+}
+
+.right-container .right-bg-image img{
+    width: 100%;
+}
+
+.left-container .destination-section button{
+    height: 73px;
+    line-height: 73px;
+    padding-left: 22px;
+    padding-right: 30px;
+    border: 0;
+    /* border-left: 2px solid blue; */
+    border-right: 2px solid #c7c3bf;
+    width: calc(100% + 45px);
+    position: relative;
+    /* right: -45px; */
+    background-size: 2px 100%;
+    background-image: -webkit-linear-gradient(top, #6e90f5 0%, #3758d3 100%), -webkit-linear-gradient(top, #6e90f5 0%, #3758d3 100%);
+    background-image: -moz-linear-gradient(top, #6e90f5 0%, #3758d3 100%), -moz-linear-gradient(top, #6e90f5 0%, #3758d3 100%);
+    background-image: -o-linear-gradient(top, #6e90f5 0%, #3758d3 100%), -o-linear-gradient(top, #6e90f5 0%, #3758d3 100%);
+    background-image: linear-gradient(to bottom, #6e90f5 0%, #3758d3 100%), linear-gradient(to bottom, #6e90f5 0%, #3758d3 100%);
+    background-color: #fff;
+    background-repeat: no-repeat;
+    text-align: left;
+    /* margin-top: 50px; */
+    color: #355b9a;
+    cursor: pointer;
+    font-weight: 500;
+}
+.left-container .destination-section button i{
+    float: right;
+    line-height: 73px;
+}
+.left-container .destination-section button:focus{
+    outline: none;
+}
+
+.main{
+    background-color: #f6f6f6;
+    height: 100vh;
+}
+
+.left-container .desc {
+    font-size: 14px;
+    font-family: 'Poppins-Light'; 
+}

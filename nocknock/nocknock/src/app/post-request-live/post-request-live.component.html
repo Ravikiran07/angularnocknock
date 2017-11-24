@@ -1,0 +1,562 @@
+<!-- <p>
+  post-request-live works!
+</p> -->
+<section class="">
+  <section class="main">
+    <div class="header-wrapper">
+      <div class="container">
+        <header class="bg-color-white">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" routerLink="/home">
+              <span class="logo-container">
+                <img src="assets/images/logo-small.png" class="logo-img" />
+              </span>
+              <span class="logo-text">Discover Buyer Power</span>
+            </a>
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <!-- <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Disabled</a>
+                    </li> -->
+              </ul>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <button type="button" class="btn btn-link transparent-button login-menu">
+                    Login &nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <section class="page-content">
+      <img class="top-red-sticker" src="assets/images/redMark.png" />
+      <div class="left-container">
+        <div class="left-bg-image">
+          <!-- <img src="assets/images/never-stop-exploring-with-cup.jpg"/> -->
+        </div>
+        <div class="text-detail">
+          <p class="text">Let offers
+            <br/> come knocking...</p>
+          <img src="assets/images/red-blue-tilde.png" />
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5"></div>
+          <div class="col-md-7">
+            <div class="right-container">
+              <div class="right-content">
+                <wizard navBarLocation="right">
+                  <wizard-step stepTitle="Step 01" optionalStep>
+                  </wizard-step>
+
+                  <wizard-step stepTitle="Step 02" (stepEnter)="onStepEnter2()" selectedStep>
+                    <!-- <button type="button" previousStep>Go to previous step</button> -->
+
+                    <div class="post-request-step post-request-step2">
+
+                      <div>
+                        <button mat-icon-button mat-button routerLink="/postRequestTravel">
+                          <i class="material-icons">arrow_back</i>
+                        </button>
+                        <h2 class="heading-text text-24">Where do you want to go?
+                          <span class="red-star">*</span>
+                        </h2>
+                        <mat-form-field class="brief-text-other">
+                          <span matPrefix class="i-text">I &nbsp;</span>
+                          <input type="text" class="other-text travel_to" matInput placeholder="Please enter your destination...">
+                          <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+                        </mat-form-field>
+                        <br/>
+                        <br/>
+                        <div class="popularTrips" *ngIf="showRegion">
+                          <h6 class="bottom-border-header">Choose your region
+                            <span class="red-star">*</span>
+                          </h6>
+                         
+                          <div class="row">
+                            <div class="col-md-6">
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Europe and Britain" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Europe and Britain
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="North and Central America" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  North and Central America
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="South America" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  South America
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Africa and Middle East" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Africa and Middle East
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Asia" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Asia
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value=" Australia and South Pacific" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Australia and South Pacific
+                                </label>
+                              </div>
+                             
+                            </div>
+                          </div>
+                          <br/>
+                          <h6 class="bottom-border-header">Choose your countries
+                            <span class="red-star">*</span>
+                          </h6>
+                          <div class="row">
+                            <div class="col-md-6">
+                              <h6 class="city-title">Europe and Britain</h6>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Spain" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Spain
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="UK" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  UK
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="France" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  France
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Italy" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Italy
+                                </label>
+                              </div>
+
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Switzerland" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Switzerland
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Greece" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Greece
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Portugal" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Portugal
+                                </label>
+                              </div>
+
+
+                            </div>
+                            <div class="col-md-6">
+                              <h6 class="city-title">Africa and Middle East</h6>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Egypt" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Egypt
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Morocco" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Morocco
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="South Africa" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  South Africa
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Mauritius" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Mauritius
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Kenya" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Kenya
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Nigeria" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Nigeria
+                                </label>
+                              </div>                             
+                            </div>
+                          </div>
+                          <hr/>
+                          <div class="clearfix">
+                            <div class="pull-right">
+                              <a routerLink="." (click)="openCountryDialog()">view more</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="" *ngIf="!showRegion">
+                          <h6 class="bottom-border-header">Populer trips</h6>
+                          <div class="row popularTrips">
+                            <div class="col-md-6">
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Agra" (change)="onCityChk()" />
+                                  <span class="box"></span>
+                                  Agra
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Alleppey (Alapuzha)" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Alleppey (Alapuzha)
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Amritsar - Golden Temple" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Amritsar - Golden Temple
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Assam and the North East" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Assam and the North East
+                                </label>
+                              </div>
+
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Delhi" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Delhi
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Divine Gujarat - Somnath, Dwarka" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Divine Gujarat - Somnath, Dwarka
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Goa" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Goa
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Madhya Pradesh" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Madhya Pradesh
+                                </label>
+                              </div>
+
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Karnataka" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Karnataka
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Punjab" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Punjab
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Shirdi" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Shirdi
+                                </label>
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Himachal Pradesh" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Himachal Pradesh
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Rajasthan" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Rajasthan
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Kashmir and Ladakh" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Kashmir and Ladakh
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Kerala" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Kerala
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Khajuraho-Orchha-Gwalior" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Khajuraho-Orchha-Gwalior
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Kochi-Ernakulam" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Kochi-Ernakulam
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Kumarakom, Kerala Backwaters" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Kumarakom, Kerala Backwaters
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Sikkim" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Sikkim
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Tamil Nadu" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Tamil Nadu
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Tirupati-Tirumala-Balaji" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Tirupati-Tirumala-Balaji
+                                </label>
+                              </div>
+                              <div>
+                                <label class="custom-checkbox-input">
+                                  <input type="checkbox" value="Varanasi" (change)="onCityChk()"/>
+                                  <span class="box"></span>
+                                  Varanasi
+                                </label>
+                              </div>
+                            </div>
+                          </div>
+                          <hr/>
+                          <div class="clearfix">
+                            <div class="pull-right">
+                              <a routerLink="." (click)="openStateDialog()">view more</a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- </div> -->
+
+                      </div>
+                      <div>
+                        <div class="" style="padding: 100px 0 400px;">
+                          <!-- <div class="" style="height: 160px;"></div> -->
+                          <h2 class="heading-text">Where do you live?
+                            <span class="red-star">*</span>
+                          </h2>
+                          <!-- <mat-form-field>
+                                        <mat-select placeholder="Favorite food">
+                                          <mat-option *ngFor="let food of foods" [value]="food.value">
+                                            {{ food.viewValue }}
+                                          </mat-option>
+                                        </mat-select>
+                                      </mat-form-field> -->
+                          <br/>
+                          <br/>
+                          <select class="light-gray-button btn country-button" id="living_country">
+                            <option>India</option>
+                            <option>Albania</option>
+                            <option>Algeria</option>
+                            <option>Bangladesh</option>
+                            <option>Bolivie</option>
+                          </select>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <mat-form-field class="brief-text-other inline-block">
+                            <span matPrefix class="i-text">I &nbsp;</span>
+                            <input type="text" class="other-text living_city" matInput placeholder="City of residence">
+                            <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+                          </mat-form-field>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
+                          <br/>
+                        </div>
+
+                      </div>
+                      <div>
+
+                        <h2 class="heading-text">Select your departure city?
+                          <span class="red-star">*</span>
+                        </h2>
+
+                        <br/>
+                        <br/>
+                        <mat-form-field class="brief-text-other inline-block">
+                          <span matPrefix class="i-text">I &nbsp;</span>
+                          <input type="text" class="other-text departure_city" matInput placeholder="From">
+                          <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+                        </mat-form-field>
+                        <br/>
+                        <br/>
+                        <div>&nbsp;&nbsp;&nbsp;
+                          <!-- <mat-checkbox>same as city residence</mat-checkbox> -->
+                          <div>
+                            <label class="custom-checkbox-input" (click)="onSameCity()">
+                              <input type="checkbox" class="same_city"/>
+                              <span class="box"></span>
+                              same as city residence
+                            </label>
+                          </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                      </div>
+                      <div>
+                        <h2 class="heading-text">Number of people travelling
+                          <span class="red-star">*</span>
+                        </h2>
+
+                        <br/>
+                        <br/>
+                        <div>
+                          <p class="number-container adults">
+                            <span class="text"> Adults
+                              <span class="sub-text">(12+ years)</span>
+                            </span>
+                            <mat-form-field class="custom-number-input">
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <input class="duration-days-input" type="number" matInput value="0" [min]="0">
+                            </mat-form-field>
+                          </p>
+                          <p class="number-container children">
+                            <span class="text"> Children
+                              <span class="sub-text">(2-12 years)</span>
+                            </span>
+                            <mat-form-field class="custom-number-input">
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <input class="duration-days-input" type="number" matInput value="0" [min]="0">
+                            </mat-form-field>
+                          </p>
+                          <p class="number-container infants">
+                            <span class="text"> Infants
+                              <span class="sub-text">(0-2 years)</span>
+                            </span>
+                            <mat-form-field class="custom-number-input">
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <input class="duration-days-input" type="number" matInput value="0" [min]="0">
+                            </mat-form-field>
+                          </p>
+                        </div>
+                        <hr/>
+
+                        <mat-form-field class="custom-number-input senior">
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <input class="duration-days-input" type="number" matInput value="0" [min]="0"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <span>Number of senior citizens included above</span>
+                        </mat-form-field>
+                        <br/>
+                        <br/>
+                        <div class="text-right">
+                          <button mat-button class="btn-blue-gradient" routerLink="/postRequestBudget">Next</button>
+                        </div>
+                      </div>
+                      <!-- <div>&nbsp;</div> -->
+                      <!-- <div>&nbsp;</div> -->
+                      <!-- <div class="last"></div> -->
+                      <!-- <div class="last"></div> -->
+                    </div>
+
+                    <!-- <button type="button" nextStep>Go to next step</button> -->
+                  </wizard-step>
+                  <wizard-step stepTitle="Step 03">
+                  </wizard-step>
+                  <wizard-step stepTitle="Step 04" (stepEnter)=onStepEnter4()>
+                  </wizard-step>
+                </wizard>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+</section>

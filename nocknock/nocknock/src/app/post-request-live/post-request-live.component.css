@@ -1,0 +1,730 @@
+.header-wrapper{
+    position: relative;
+    height: 0;
+    z-index: 1;
+}
+
+.navbar-brand .logo-text{
+    color: #fff;
+}
+
+.top-red-sticker{
+    position: absolute;
+    top: 0;
+    left: 40%;
+    z-index: 1;
+    margin-left: -98px;
+}
+
+
+.text-detail{
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    padding-right: 15px;
+}
+
+.text-detail .text{
+    font-size: 50px;
+    color: #fff;
+    margin-left: 30%;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.text-detail img{
+    float: right;
+    position: relative;
+    /* right: 50px; */
+    right: -32px;
+}
+
+.left-container{
+    position: absolute;
+    /* right: 0; */
+    /* width: 100%; */
+    width: 40%;
+}
+
+.left-container .left-bg-image{
+    background-image: url('../../assets/images/never-stop-exploring-with-cup.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* width: 40%; */
+    /* margin-right: -15px; */
+}
+
+.left-container .right-bg-image img{
+    /* width: 100%; */
+}
+
+.right-container{
+    /* margin-top: 110px; */
+    height: 100vh;
+    overflow-y: auto;
+}
+
+.right-container::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+/* optional: show position indicator in red */
+.right-container::-webkit-scrollbar-thumb {
+    background: #FF0000;
+}
+
+.right-container .right-content{
+    margin-top: 110px;
+}
+
+.post-request-step .slick-slide:first-child{
+    /* height: 380px; */
+}
+.post-request-step .slick-slide{
+    /* min-height: 200px; */
+    /* width: 100% !important; */
+    /* margin-bottom: 100px; */
+}
+
+.post-request-step .slick-slide.last{
+    /* min-height: 50px; */
+}
+:host >>> .slick-slider .slick-list.slick-list{
+    /* height: 800px !important; */
+    /* height: 850px !important; */
+    /* overflow-y: scroll; */
+    /* margin-top: 130px; */
+    /* padding-top: 130px !important; */
+    /* height: auto !important; */
+    /* height: 100vh !important; */
+}
+
+
+/* :host >>> .slick-slider .slick-list.slick-list::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+:host >>> .slick-slider .slick-list.slick-list::-webkit-scrollbar{
+    width: 10px;
+	background-color: #F5F5F5;
+    padding-right: 20px;
+}
+
+:host >>> .slick-slider .slick-list.slick-list::-webkit-scrollbar-thumb{
+	border-radius: 10px;
+	background-image: -webkit-gradient(linear,left bottom,left top,
+    color-stop(0.44, rgb(122,153,217)),
+    color-stop(0.72, rgb(73,125,189)),
+    color-stop(0.86, rgb(28,58,148)));
+} */
+
+.post-request-step .slick-slide,
+.post-request-step .slick-slide.slick-active{
+    opacity: 0.4;
+}
+
+.post-request-step .slick-slide{
+    width: 100% !important;
+}
+
+.post-request-step .slick-slide.slick-current.slick-center,
+.post-request-step .slick-slide.slick-current.slick-active.slick-center{
+    opacity: 1;
+}
+
+.destination-boxes{
+    padding-bottom: 60px;
+    /* margin-bottom: 50px; */
+    /* color: red; */
+}
+
+.destination-boxes .destination-box{
+    font-family: 'Poppins-Bold';
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 80px;
+}
+
+.destination-boxes .destination-box input[type="radio"] {
+    visibility: hidden;
+}
+
+.destination-boxes .destination-box img{
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    height: 80px;
+    width: auto;
+}
+
+.destination-boxes .destination-box .name{
+    font-size: 22px;
+    display: block;
+    text-align: center;
+}
+
+#ui-datepicker-div{
+    z-index: 1001;
+}
+
+.heading-text{
+    font-family: 'Poppins-bold';
+}
+
+h2.heading-text{
+    font-family: 'Poppins-bold';
+    font-size: 30px;    
+}
+
+.flexible-text{
+    font-family: 'Poppins-Regular';
+}
+
+/* 
+:host >>> .steps .tablist{
+    color: red;
+}
+
+:host >>> .my-stepper .steps{
+    color: green;
+    position: absolute;
+    right: 0;
+} */
+
+>>> india-city-dialog .custom-number-input,
+.custom-number-input{
+    width: 86px;
+}
+
+
+
+
+>>> india-city-dialog input[type=number]::-webkit-inner-spin-button,
+>>> india-city-dialog input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+>>> india-city-dialog input[type=number],
+input[type=number]{
+  -moz-appearance: textfield;
+}
+
+>>> .duration-days-input,
+.duration-days-input{
+    width: 25px;
+    height: 18px;
+    line-height: 1.65;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #eee;
+    text-align: center;
+    font-size: 12px;
+}
+
+>>> .duration-days-input:focus,
+.duration-days-input:focus {
+  outline: 0;
+}
+
+>>>  .duration-days-input + .quantity-nav,
+:host >>>  .duration-days-input + .quantity-nav{
+    display: inline-block;
+    position: relative;
+    top: -11px;
+}
+
+>>>  .duration-days-input + .quantity-nav .quantity-button,
+:host >>>  .duration-days-input + .quantity-nav .quantity-button{
+    position: absolute;
+}
+
+>>>  .duration-days-input + .quantity-nav .quantity-up,
+>>>  .duration-days-input + .quantity-nav .quantity-down,
+:host >>>  .duration-days-input + .quantity-nav .quantity-up,
+:host >>>  .duration-days-input + .quantity-nav .quantity-down{
+    border: 1px solid rgb(102, 102, 102);
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    text-align: center;
+    cursor: pointer;
+}
+
+>>>  .duration-days-input + .quantity-nav .quantity-up,
+:host >>>  .duration-days-input + .quantity-nav .quantity-up{
+    /* right: -24px; */
+    right: -30px;
+    line-height: 0.6;
+    
+}
+
+>>>  .duration-days-input + .quantity-nav .quantity-down,
+:host >>>  .duration-days-input + .quantity-nav .quantity-down{
+    left:-49px;
+    line-height: 0.6;    
+}
+
+>>>  .duration-days-input + .quantity-nav .quantity-down.first-digit,
+:host >>>  .duration-days-input + .quantity-nav .quantity-down.first-digit{
+    color: #ccc;
+    border-color: #ccc;
+    cursor: default;
+}
+
+:host >>>  .theme-boxes {
+    width: 90%;
+}
+:host >>>  .theme-boxes .theme-box .mat-checkbox-inner-container{
+     position: absolute;
+     visibility: hidden;
+ }
+ :host >>>  .theme-boxes .theme-box{
+     /* color: red; */
+}
+
+:host >>> .theme-boxes .theme-box label{
+    background-color: #f6f8ff;
+    height: 112px;
+    width: 112px;
+    margin-bottom: 4px;
+    position: relative;
+}
+
+:host >>>  .theme-boxes .theme-box.mat-checkbox.mat-checkbox-checked label{
+    background-color: #b8c6f6;
+}
+
+:host >>> .theme-boxes .theme-box label .mat-checkbox-label{
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+:host >>> .theme-boxes .theme-box label .theme-image-container{
+    height: 40px;
+    position: relative;
+}
+
+:host >>> .theme-boxes .theme-box label .theme-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+:host >>> .theme-boxes .theme-box label .theme-text{
+    padding-top: 15px;
+    display: inline-block;
+    font-size: 12px;
+    font-family: 'Poppins-Regular';
+}
+
+.theme-view-more{
+    height: 112px;
+    width: 112px;
+    vertical-align: top;
+    line-height: 112px;
+    background-color: #fafafa;
+    /* box-shadow: none !important; */
+}
+
+:host >>> .slick-arrow{
+    /* color: red; */
+    /* background: red; */
+}
+>>> india-city-dialog .brief-text-other,
+:host >>> .brief-text-other{
+    position: relative;
+}
+
+>>> india-city-dialog .brief-text-other .i-text,
+:host >>> .brief-text-other .i-text{
+    position: absolute;
+    left: 30px;
+    /* top: -2px; */
+    font-weight: 500;
+    line-height: 44px;
+    font-family: 'Poppins-Regular';
+}
+
+>>> india-city-dialog .brief-text-other .other-text,
+:host >>> .brief-text-other .other-text{
+    width: 100%;
+    height: 44px;
+    padding-left: 40px;
+}
+
+:host >>> .mat-vertical-stepper-header.mat-step-header{
+    right: 0px;
+    position: fixed;
+    min-height: 172px;
+    background-color: #5a7ded;
+    display: block;
+    width: 5px;
+    padding: 0;
+}
+
+:host >>> .mat-stepper-vertical-line::before{
+    /* border-color: #999999; */
+    border-color: transparent;
+}
+
+
+:host >>> .mat-stepper-vertical{
+    /* color: red; */
+}
+
+:host >>> .mat-step{
+    /* color: green; */
+}
+
+:host >>> .mat-vertical-stepper-header{
+    /* position: relative; */
+    /* right: 0; */
+
+}
+
+:host >>> .mat-stepper-vertical .mat-step{
+    /* height: 200px; */
+}
+:host >>> .mat-vertical-stepper-header .mat-step-icon{
+    /* display: none; */
+    position: absolute;
+    bottom: 0;
+}
+:host >>> .mat-stepper-vertical .mat-vertical-content-container{
+    /* height: 300px; */
+}
+.country-button{
+    display: inline-block;
+}
+
+.number-container .text{
+    font-size: 18px;
+    color: #666666;
+    font-family: 'Poppins-Medium';
+}
+
+.number-container .sub-text{
+    color: #999999;
+    font-size: 14px;
+}
+
+.number-container .custom-number-input{
+    float: right;
+}
+
+.radios-container{
+    padding-left: 30px;
+}
+
+.example-radio-group {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+/* .offer-boxes-container{
+    
+} */
+
+:host >>> .theme-boxes .offer-box.theme-box label{
+    background-color: #f6f8ff;
+    height: 73px;
+    width: 220px;
+    text-align: center;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+:host >>>  .theme-boxes .offer-box.theme-box label .theme-text{
+    padding: 0;
+}
+
+/* .offer-boxes-container .input{
+
+} */
+
+/* .offer-boxes-container .detail-text{
+
+} */
+
+/* mat-dialog-container,
+:host >>>  .mat-dialog-container{
+    border-left: 5px solid red;
+} */
+
+.cdk-overlay-container .cdk-overlay-backdrop + .cdk-overlay-pane  mat-dialog-container {
+    background-color: #000;
+    width: 250px;
+    height: 250px
+}
+mat-dialog-container,{
+    height: 500px;
+    width: 300px;
+}
+
+/* below trick is working for dialog */
+
+/* >>> india-city-dialog mat-grid-tile figure mat-list mat-list-item .city-title{
+    background-color: red;
+} */
+
+
+>>> india-city-dialog .heading-text{
+    font-weight: 700;
+    font-size: 22px;
+}
+
+>>> india-city-dialog .sub-heading-text{
+    color: #999999;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+>>> india-city-dialog  .city-title{
+    /* font-size: 14px;
+    font-weight: 700;
+    color: #333333; */
+}
+
+>>> india-city-dialog .mat-checkbox-label{
+    /* color: #666666;
+    font-size: 14px; */
+}
+
+>>> india-city-dialog {
+
+}
+>>> india-city-dialog .custom-checkbox-input,
+.custom-checkbox-input{
+    color: #666666;
+    font-size: 14px;
+    font-family: 'Poppins-Medium';
+}
+>>> india-city-dialog .custom-checkbox-input input[type="checkbox"] ,
+.custom-checkbox-input input[type="checkbox"] {
+    display: none;
+}
+
+>>> india-city-dialog .custom-checkbox-input span.box ,
+.custom-checkbox-input span.box {
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    border: 1px solid #7b95ee;
+    border-radius: 3px;
+    margin-right: 5px;
+    vertical-align: text-top;
+}
+
+>>> india-city-dialog .custom-checkbox-input input[type="checkbox"]:checked + span.box ,
+.custom-checkbox-input input[type="checkbox"]:checked + span.box {
+    position: relative;
+    
+}
+>>> india-city-dialog .custom-checkbox-input input[type="checkbox"]:checked + span.box:before ,
+.custom-checkbox-input input[type="checkbox"]:checked + span.box:before {
+    content: "\F00C";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #7b95ee;
+    font-size: 13px;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+}
+
+
+/* vertical wizard style start */
+>>> wizard .wizard-steps.vertical{
+    width: auto !important;
+}
+
+>>> wizard-navigation-bar.vertical{
+    position: fixed !important;
+    right: 0;
+    top: auto !important;
+    width: auto !important;
+}
+
+>>> wizard-navigation-bar.vertical ul.steps-indicator{
+    padding: 0 !important;
+    background-color: #999999;
+}
+
+>>> wizard-navigation-bar.vertical ul.steps-indicator li{
+    /* right: 0px;
+    position: fixed;
+    min-height: 172px;
+    background-color: #5a7ded;
+    display: block;
+    width: 5px;
+    padding: 0; */
+
+    min-height: 172px;
+    width: 5px;
+}
+
+>>> wizard-navigation-bar.vertical ul.steps-indicator li.editing,
+>>> wizard-navigation-bar.vertical ul.steps-indicator li.current{
+    background-color: #5a7ded;
+}
+
+>>> wizard-navigation-bar.vertical ul.steps-indicator li:before{
+    width: 0 !important;
+}
+
+>>> wizard-navigation-bar.vertical ul.steps-indicator li:after{
+    width: 0 !important;
+    /* left: -7px !important; */
+}
+
+>>> wizard-navigation-bar.vertical ul.steps-indicator li div{}
+
+>>> wizard-navigation-bar.vertical ul.steps-indicator li div:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    background-color: red;
+    width: 10px;
+    height: 2px;
+    left: -10px;
+}
+
+>>> wizard-navigation-bar.vertical ul.steps-indicator li div a{
+    position: absolute;
+    display: inline-block;
+    width: auto;
+    left: -60px;
+    margin: 0 !important;
+    padding: 0;
+    bottom: -6px;
+    text-transform: capitalize !important;
+    font-weight: normal !important;
+}
+
+>>> wizard-navigation-bar.vertical ul.steps-indicator li div a{
+    visibility: hidden;
+}
+
+>>> wizard-navigation-bar.vertical ul.steps-indicator li.editing div a,
+>>> wizard-navigation-bar.vertical ul.steps-indicator li.current div a{
+    visibility: visible;
+}
+
+
+/* vertical wizard style end */
+
+>>> mat-checkbox .city-state-list-text .mat-checkbox-label{
+    
+}
+
+>>> mat-checkbox.city-state-list-text .mat-checkbox-layout .mat-checkbox-label{
+font-size: 14px;
+    color: #666666;
+    font-family: 'Poppins-Medium';
+}
+
+>>> .mat-checkbox.mat-checkbox-checked{
+    /* color: red; */
+}
+.custom-budget-slider{
+    position: relative
+}
+.custom-budget-slider .budgetSlider{
+    width: calc(100% - 170px);
+    margin-left: auto;
+    margin-right: auto;
+    height: 5px;
+    background-color: #d6d6d6;
+    border: 0;
+    box-shadow: none;
+}
+
+.custom-budget-slider .sliderValue{
+    position: absolute;
+    width: 66px;
+    border: 0;
+    font-family: 'Poppins-Regular';
+    font-size: 14px;
+    color: #666666;
+    text-align: center;
+    top: -10px;
+}
+
+.custom-budget-slider .minValue{
+    left: 0;
+}
+
+.custom-budget-slider .maxValue{
+    right: 0;
+}
+
+>>> .custom-budget-slider .ui-widget-content .ui-state-default{
+    border: 4px solid #fff;;
+    height: 20px;
+    width: 20px;
+    background-color: #355b9a;
+    border-radius: 50%;
+    top: -7px;
+}
+
+>>> .custom-budget-slider .ui-widget-content .ui-state-default:before{
+    content: '';
+    width: 82px;
+    height: 30px;
+    background-color: #5a7ded;
+    display: inline-block;
+    border-radius: 3px;
+    position: absolute;
+    top: -50px;
+    left: -35px;
+}
+
+>>> .ui-widget.ui-widget-content,
+>>> .ui-datepicker{
+    border: none;
+    box-shadow: 0px 0px 20px #000;
+    border-radius: 0;
+}
+>>> .ui-datepicker .ui-widget-header{
+    background-color: #fff;
+    border: 0;
+}
+>>> .ui-datepicker .ui-datepicker-calendar tbody tr td .ui-state-default{
+    border: none;
+    text-align: center;
+    background-color: #fff;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    padding: 0;
+    font-size: 12px;
+    font-weight: 700;
+}
+>>> .ui-datepicker .ui-datepicker-calendar tbody tr td .ui-state-default.ui-state-highlight{
+    color: #003e97;
+}
+>>> .ui-datepicker .ui-datepicker-calendar tbody tr td .ui-state-default.ui-state-active{
+    background-color: #003e97;
+    color: #fff;
+    border-radius: 50%;
+}

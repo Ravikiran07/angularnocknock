@@ -1,0 +1,277 @@
+<!-- display-1
+<h1 class="display-1">The quick brown fox jumps over the lazy dog.</h1>
+<h2 class="display-1">The quick brown fox jumps over the lazy dog.</h2>
+<h3 class="display-1">The quick brown fox jumps over the lazy dog.</h3>
+<h4 class="display-1">The quick brown fox jumps over the lazy dog.</h4>
+<h5 class="display-1">The quick brown fox jumps over the lazy dog.</h5>
+<h6 class="display-1">The quick brown fox jumps over the lazy dog.</h6> -->
+
+<!-- <h1 class="mat-dialog-title">The quick brown fox jumps over the lazy dog.</h1> -->
+<!-- <h2 class="mat-dialog-title">The quick brown fox jumps over the lazy dog.</h2> -->
+
+<div class="clearfix">
+    <div class="pull-left">
+        <!-- <h3 class="title">Select the cities you would like to visit</h3> -->
+        <h2 class="heading-text">Select the cities you would like to visit</h2>
+        <h6 class="sub-heading-text">(If you can, indicate the number of nights in each city)</h6>
+    </div>
+    <div class="pull-right">
+        <button mat-icon-button [mat-dialog-close]="true">
+            <i class="material-icons">close</i>
+        </button>
+    </div>
+</div>
+<mat-dialog-content>
+    <br>
+    <br>
+
+    <!-- <mat-checkbox class="theme-box">
+    <div class="theme-image-container">
+        <img src="assets/images/theme-beach.png" class="theme-img" />
+    </div>
+    <span class="theme-text">Beach</span>
+</mat-checkbox> -->
+    <div class="state-chk-boxes">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="city-state-list-text">
+                    <h6 class="city-title">Rajasthan</h6>
+                </div>
+                <div class="city-state-list-text">
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Jaipur" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Jaipur
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+                <div class="city-state-list-text">
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Jodhpur" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Jodhpur
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+                <div class="city-state-list-text">
+
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Jaisalmer" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Jaisalmer
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+                <div class="city-state-list-text">
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Udaipur" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Udaipur
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+                <div class="city-state-list-text">
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Ajmer" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Ajmer
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+                <div class="city-state-list-text">
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Bikaner" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Bikaner
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+                <div class="city-state-list-text">
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Mount Abu" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Mount Abu
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="city-state-list-text">
+                    <h6 class="city-title">Kerala</h6>
+                </div>
+                <div class="city-state-list-text">
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Kochi" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Kochi
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+                <div class="city-state-list-text">
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Trivandrum" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Trivandrum
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+                <div class="city-state-list-text">
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Allepey" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Allepey
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+                <div class="city-state-list-text">
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Kumarakom" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Kumarakom
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+                <div class="city-state-list-text">
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Munnar" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Munnar
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+                <div class="city-state-list-text">
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Thekkady" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Thekkady
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+                <div class="city-state-list-text">
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Varkala" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Varkala
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+                <div class="city-state-list-text">
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Marari" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Marari
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="city-state-list-text">
+                    <h6 class="city-title">Karnataka</h6>
+                </div>
+                <div class="city-state-list-text">
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Coorg" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Coorg
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+                <div class="city-state-list-text">
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Mysore" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Mysore
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+                <div class="city-state-list-text">
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Hampi" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Hampi
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+                <div class="city-state-list-text">
+                    <label class="custom-checkbox-input">
+                        <input type="checkbox" value="Bangalore" (change)="onCityChk()" />
+                        <span class="box"></span>
+                        Bangalore
+                    </label>
+                    <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" value="1" [min]="1">N
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <div class="brief-text-other">
+        <span matPrefix class="i-text">I &nbsp;</span>
+        <input type="text" class="other-text" matInput placeholder="Other cities...">
+        <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+    </div>
+    <br/>
+    <hr/>
+    <br/>
+    <div class="text-center">
+        <button mat-button class="btn-white-like-gradient" (click)="cancelDialog()" [mat-dialog-close]="true">Cancel</button>
+        <button mat-button class="btn-blue-gradient" (click)="saveDataAndCloseDialog()" [mat-dialog-close]="true">Save</button>
+    </div>
+</mat-dialog-content>

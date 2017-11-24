@@ -1,0 +1,165 @@
+/* Slider */
+.slick-slider
+{
+    position: relative;
+
+    display: block;
+    box-sizing: border-box;
+
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+    -webkit-touch-callout: none;
+    -khtml-user-select: none;
+    -ms-touch-action: pan-y;
+        touch-action: pan-y;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.slick-list
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    margin: 0;
+    padding: 0;
+}
+.slick-list:focus
+{
+    outline: none;
+}
+.slick-list.dragging
+{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.slick-slider .slick-track,
+.slick-slider .slick-list
+{
+    -webkit-transform: translate3d(0, 0, 0);
+       -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+         -o-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+}
+
+.slick-track
+{
+    position: relative;
+    top: 0;
+    left: 0;
+
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.slick-track:before,
+.slick-track:after
+{
+    display: table;
+
+    content: '';
+}
+.slick-track:after
+{
+    clear: both;
+}
+.slick-loading .slick-track
+{
+    visibility: hidden;
+}
+
+.slick-slide
+{
+    display: none;
+    float: left;
+
+    height: 100%;
+    min-height: 1px;
+}
+[dir='rtl'] .slick-slide
+{
+    float: right;
+}
+.slick-slide img
+{
+    display: block;
+}
+.slick-slide.slick-loading img
+{
+    display: none;
+}
+.slick-slide.dragging img
+{
+    pointer-events: none;
+}
+.slick-initialized .slick-slide
+{
+    display: block;
+}
+.slick-loading .slick-slide
+{
+    visibility: hidden;
+}
+.slick-vertical .slick-slide
+{
+    display: block;
+
+    height: auto;
+
+    border: 1px solid transparent;
+}
+.slick-arrow.slick-hidden {
+    display: none;
+}
+
+/* custom slick style */
+
+
+.slick-list.draggable{
+    padding: 0 !important;
+}
+.slick-slide{
+    outline: none;
+}
+.slick-dots{
+    border-bottom: 1px solid #e8e9ed;
+}
+.slick-initialized.slick-slider .slick-dots li{
+    width: 60px;
+    margin: 0;
+    height: 1px;
+    margin-bottom: -9px;
+    outline: 0;
+    padding: 0;
+}
+
+.slick-initialized.slick-slider .slick-dots li.slick-active{
+    /* border-bottom: 1px solid blue; */    
+    background: #3962e3; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #7aadff , #3861E3, #249eda); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(right, #7aadff , #3962e3, #249eda); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(right,#7aadff , #3962e3, #249eda); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to right, #7aadff , #3962e3, #249eda); /* Standard syntax */
+}
+
+.nav-arrow.right-arrow{
+    right: 40%;
+    left: initial;
+}
+
+.nav-arrow{
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: -10px;
+    left: 40%;
+    right: initial;
+}

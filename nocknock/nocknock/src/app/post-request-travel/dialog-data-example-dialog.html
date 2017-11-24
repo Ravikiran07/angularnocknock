@@ -1,0 +1,219 @@
+<!-- display-1
+<h1 class="display-1">The quick brown fox jumps over the lazy dog.</h1>
+<h2 class="display-1">The quick brown fox jumps over the lazy dog.</h2>
+<h3 class="display-1">The quick brown fox jumps over the lazy dog.</h3>
+<h4 class="display-1">The quick brown fox jumps over the lazy dog.</h4>
+<h5 class="display-1">The quick brown fox jumps over the lazy dog.</h5>
+<h6 class="display-1">The quick brown fox jumps over the lazy dog.</h6> -->
+
+<!-- <h1 class="mat-dialog-title">The quick brown fox jumps over the lazy dog.</h1> -->
+<!-- <h2 class="mat-dialog-title">The quick brown fox jumps over the lazy dog.</h2> -->
+
+<div class="clearfix">
+    <div class="pull-left">
+        <!-- <h3 class="title">Select the cities you would like to visit</h3> -->
+        <h2 class="heading-text">Where do you want to travel?</h2>
+        <h6 class="sub-heading-text">(If you can, indicate the number of nights in each city)</h6>
+    </div>
+    <div class="pull-right">
+        <button mat-icon-button [mat-dialog-close]="true">
+            <i class="material-icons">close</i>
+        </button>
+    </div>
+</div>
+<mat-dialog-content>
+    <br>
+    <br>
+
+    <!-- <mat-checkbox class="theme-box">
+    <div class="theme-image-container">
+        <img src="assets/images/theme-beach.png" class="theme-img" />
+    </div>
+    <span class="theme-text">Beach</span>
+</mat-checkbox> -->
+
+    <div class="row">
+        <div class="col-md-4">
+            <mat-list-item class="city-state-list-text">
+                <h6 class="city-title">Rajasthan</h6>
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Jaipur
+                    <!-- <span class="custom-number-input">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input class="duration-days-input" type="number" matInput value="1" [min]="1">
+                    </span> -->
+                </label>
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Jodhpur
+                </label>
+
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Jaisalmer
+                </label>
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Udaipur
+                </label>
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Ajmer
+                </label>
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Bikaner
+                </label>
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Mount Abu
+                </label>
+            </mat-list-item>
+        </div>
+        <!-- <mat-selection-list>
+                <mat-list-item>
+                    <mat-checkbox [align]="end" class="example-margin">
+                        I'm a checkbox
+                    </mat-checkbox>
+                </mat-list-item>
+                <mat-list-item>
+                    <mat-checkbox [align]="start" class="example-margin">
+                        I'm a checkbox
+                    </mat-checkbox>
+                </mat-list-item>
+                <mat-list-option>Rajasthan</mat-list-option>
+                <mat-list-option>Jaipur</mat-list-option>
+                <mat-list-option>Jodhpur</mat-list-option>
+                <mat-list-option>Jaisalmer</mat-list-option>
+                <mat-list-option>Udaipur</mat-list-option>
+                <mat-list-option>Bikaner</mat-list-option>
+                <mat-list-option>Mount Abu</mat-list-option>
+            </mat-selection-list> -->
+        <div class="col-md-4">
+
+            <mat-list-item class="city-state-list-text">
+                <h6 class="city-title">Kerala</h6>
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Kochi
+                </label>
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Trivandrum
+                </label>
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Allepey
+                </label>
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Kumarakom
+                </label>
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Munnar
+                </label>
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Thekkady
+                </label>
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Varkala
+                </label>
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Marari
+                </label>
+            </mat-list-item>
+        </div>
+        <div class="col-md-4">
+            <mat-list-item class="city-state-list-text">
+                <h6 class="city-title">Karnataka</h6>
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Coorg
+                </label>
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Mysore
+                </label>
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Hampi
+                </label>
+            </mat-list-item>
+            <mat-list-item class="city-state-list-text">
+                <label class="custom-checkbox-input">
+                    <input type="checkbox" />
+                    <span class="box"></span>
+                    Bangalore
+                </label>
+            </mat-list-item>
+        </div>
+    </div>
+    <br/>
+    <mat-form-field class="brief-text-other">
+        <span matPrefix class="i-text">I &nbsp;</span>
+        <input type="text" class="other-text" matInput placeholder="Other cities...">
+        <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+    </mat-form-field>
+    <br/>
+    <br/>
+</mat-dialog-content>

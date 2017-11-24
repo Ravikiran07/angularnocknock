@@ -1,0 +1,68 @@
+<mat-dialog-content>
+    <div class="row-container">
+        <div class="row custom-row">
+            <div class="col-md-5 left-container">
+                <div class="left-content-container">
+                    <div class="text-center">
+                        <p class="sub-title-text">Sign in to NockNock to complete your post</p>
+                        <br/>
+                        <button class="social-login-button login-with-facebook" mat-raised-button color="primary">
+                            <i class="fa fa-facebook" aria-hidden="true"></i> SIGN IN WITH FACEBOOK</button>
+                        <br/>
+                        <br/>
+                        <button class="social-login-button login-with-google" mat-raised-button color="warn">
+                            <i class="fa fa-google" aria-hidden="true"></i>SIGN IN WITH GOOGLE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-7 right-container">
+                <div class="right-content-container">
+                    <div class="clearfix">
+                        <div class="pull-right">
+                            <img src="assets/images/redMarkRightTopToLeftBottom.png" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h2 class="heading-text">SIGN IN WITH EMAIL</h2>
+                            <br/>
+                            <div class="boxes-container">
+                                <mat-form-field class="brief-text-other">
+                                    <span matPrefix class="i-text">I &nbsp;</span>
+                                    <input type="text" class="other-text" matInput placeholder="Email ID/Mobile Number">
+                                    <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+                                </mat-form-field>
+                                <br/>
+                                <br/>
+                                <mat-form-field class="brief-text-other">
+                                    <!-- <span matPrefix class="i-text">I &nbsp;</span> -->
+                                    <input type="password" class="other-text" matInput placeholder="Enter Password">
+                                    <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+                                </mat-form-field>
+                                <div class="clearfix">
+                                    <a class="pull-right forgot-password-text">Forgot password?</a>
+                                </div>
+                                <br/>
+                                <label class="custom-checkbox-input">
+                                    <input type="checkbox" />
+                                    <span class="box"></span>
+                                    Remember Me
+                                </label>
+                            </div>
+                            <br/>
+                            <br/>
+                            <button mat-button routerLink="/login" class="btn-blue-gradient login-button">SIGN IN TO NOCKNOCK</button>
+                            <br/>
+                            <br/>
+                            <P class="goto-signup-text">NOT A NOCKNOCK MEMBER YET?
+                                <a class="goto-signup" routerLink="/login">SIGN UP</a>
+                            </P>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-dialog-content>

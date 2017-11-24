@@ -1,0 +1,816 @@
+<!-- <p>
+  post-request works!
+</p> -->
+<section class="">
+  <section class="main">
+    <div class="header-wrapper">
+      <div class="container">
+        <header class="bg-color-white">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" routerLink="/home">
+              <span class="logo-container">
+                <img src="assets/images/logo-small.png" class="logo-img" />
+              </span>
+              <span class="logo-text">Discover Buyer Power</span>
+            </a>
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <!-- <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Disabled</a>
+                    </li> -->
+              </ul>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <button type="button" class="btn btn-link transparent-button login-menu">
+                    Login &nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <section class="page-content">
+      <img class="top-red-sticker" src="assets/images/redMark.png" />
+      <div class="left-container">
+        <div class="left-bg-image">
+          <!-- <img src="assets/images/never-stop-exploring-with-cup.jpg"/> -->
+        </div>
+        <div class="text-detail">
+          <p class="text">Let offers
+            <br/> come knocking...</p>
+          <img src="assets/images/red-blue-tilde.png" />
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5"></div>
+          <div class="col-md-7">
+            <div class="right-container">
+              <div class="right-content">
+                <wizard navBarLocation="right">
+                  <wizard-step stepTitle="Step 01" (stepEnter)=onStepEnter1()>
+                    <div class="post-request-step post-request-step1">
+                      <div>
+                        <h2 class="heading-text">Where do you want to travel?
+                          <span class="red-star">*</span>
+                        </h2>
+                        <!-- <br/> -->
+                        <div class="destination-boxes">
+                          <label class="destination-box" #selectIndia>
+                            <input type="radio" name="destination" [checked]='true' (click)="selectTravelDestination('india', selectIndia)">
+                            <img *ngIf="selectedDestination == 'india'" src="assets/images/destination-domestic2.png" />
+                            <img *ngIf="selectedDestination == 'international'" src="assets/images/destination-domestic3.png" />
+                            <span [ngClass]="(selectedDestination=='india')?'text-blue-gradient':'text-gray-gradient'" class="name">India</span>
+                          </label>
+                          <label class="destination-box" #selectInternational>
+                            <input type="radio" name="destination" (click)="selectTravelDestination('international', selectInternational)">
+                            <img *ngIf="selectedDestination == 'international'" src="assets/images/destination-international2.png" />
+                            <img *ngIf="selectedDestination == 'india'" src="assets/images/destination-international3.png" />
+                            <span [ngClass]="(selectedDestination=='india')?'text-gray-gradient':'text-blue-gradient'" class="name">International</span>
+                          </label>
+                          <!-- <a class="destination-box" href="#">
+                          <img src="assets/images/destination-domestic.png"/>
+                          <span>I want to explore <br/>both options</span>
+                        </a> -->
+                        </div>
+                      </div>
+
+                      <div>
+                        <h2 class="heading-text">Select dates
+                          <span class="red-star">*</span>
+                        </h2>
+                        <br/>
+                        <input id="datepicker-start-date" class="light-gray-button btn" placeholder="Start Date" />
+                        <!-- <mat-form-field>
+                          <input class="light-gray-button btn" [min]="minDate" [max]="maxDate" matInput [matDatepicker]="picker1" placeholder="Start Date">
+                          <mat-datepicker-toggle matPrefix [for]="picker1"></mat-datepicker-toggle>
+                          <mat-datepicker #picker1></mat-datepicker>
+                        </mat-form-field> -->
+                        <!-- <mat-form-field>
+                                          <input class="light-gray-button btn" [min]="minDate" [max]="maxDate" matInput [matDatepicker]="picker1" placeholder="End Date">
+                                          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                          <mat-datepicker #picker1></mat-datepicker>
+                                        </mat-form-field> -->
+                        &nbsp;&nbsp;
+                        <input id="datepicker-end-date" class="light-gray-button btn" placeholder="End Date" />
+                        <!-- <mat-form-field>
+                          <input class="light-gray-button btn" [min]="minDate" [max]="maxDate" matInput [matDatepicker]="picker2" placeholder="End Date">
+                          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                          <mat-datepicker #picker2></mat-datepicker>
+                        </mat-form-field> -->
+                        <br/>
+                        <br/>
+                        <div>&nbsp;&nbsp;&nbsp;
+                          <div>
+                            <label class="custom-checkbox-input">
+                              <input type="checkbox" />
+                              <span class="box"></span>
+                              My dates are flexible
+                            </label>
+                          </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <h5 class="heading-text">
+                          If you are not sure of the dates,
+                          <br/> choose just a month
+                        </h5>
+                        <!-- <input id="datepicker-month" mode="month" class="light-gray-button btn" placeholder="Month" /> -->
+                        <!-- <dp-day-calendar></dp-day-calendar> -->
+                        <!-- <dp-day-calendar mode="month" enableMonthSelector="true"></dp-day-calendar> -->
+                        <!-- <mat-form-field>
+                          <input class="light-gray-button btn" [min]="minDate" [max]="maxDate" matInput [matDatepicker]="picker3" placeholder="Month">
+                          <mat-datepicker-toggle matPrefix [for]="picker3"></mat-datepicker-toggle>
+                          <mat-datepicker startView="year" #picker3></mat-datepicker>
+                        </mat-form-field> -->
+                        <input class="light-gray-button btn monthPicker" placeholder="Month" />
+                        <br/>
+                        <br/>
+                        <p> Desired duration in days
+                          <span class="custom-number-input">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input class="duration-days-input" type="number" matInput placeholder="Favorite food" value="1" [min]="1">
+                          </span>
+                        </p>
+                        <br/>
+                        <br/>
+                      </div>
+                      <div>
+                        <h2 class="heading-text">What type of a holiday do you want?</h2>
+                        <h5 class="heading-text">(Select up to three themes)</h5>
+                        <div class="theme-boxes">
+                          <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-family-vacation.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Family Vacation</span>
+                          </mat-checkbox>
+                          <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-honeymoon.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Honeymoon</span>
+                          </mat-checkbox>
+                          <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-spa-and-wellness.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Spa &amp; Wellness</span>
+                          </mat-checkbox>
+                          <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-adventure.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Adventure</span>
+                          </mat-checkbox>
+                          <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-cruise.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Cruise</span>
+                          </mat-checkbox>
+                          <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-educational.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Educational</span>
+                          </mat-checkbox>
+                          <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-mountains.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Mountains</span>
+                          </mat-checkbox>
+                          <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-wildlife.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Wildlife</span>
+                          </mat-checkbox>
+                          <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-beach.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Beach</span>
+                          </mat-checkbox>
+                          <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-pilgrimage.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Pilgrimage</span>
+                          </mat-checkbox>
+                          <a mat-button routerLink="." class="theme-view-more">View More</a>
+                          <!-- <div class="theme-box">
+                                            <label class="box">
+                                              <input type="checkbox">
+                                              <img src="assets/images/theme-family-vacation.png" class="theme-img" />
+                                              <span>Family Vacation</span>
+                                            </label>
+                                          </div> -->
+                        </div>
+                        <br/>
+                        <div>&nbsp;&nbsp;&nbsp;
+                          <!-- <mat-checkbox>Others :</mat-checkbox> -->
+                          <label class="custom-checkbox-input">
+                            <input type="checkbox" />
+                            <span class="box"></span>
+                            Others :
+                          </label>
+                        </div>
+                        <div>
+                          <mat-form-field class="brief-text-other">
+                            <span matPrefix class="i-text">I &nbsp;</span>
+                            <input type="text" class="other-text" matInput placeholder="Write in brief what you would like.">
+                            <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+                          </mat-form-field>
+                          <br/>
+                          <br/>
+                          <div class="text-right">
+                            <button mat-button nextStep class="btn-blue-gradient">Next</button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div>&nbsp;</div>
+                      <!-- <div>&nbsp;</div> -->
+                      <!-- <div class="last"></div> -->
+                      <!-- <div class="last"></div> -->
+                      <!-- <div>your content 5 </div> -->
+                      <!-- <div>your content 6 </div> -->
+                      <!-- <div>your content 7 </div> -->
+                      <!-- <div>your content 8 </div> -->
+
+                    </div>
+                    <!-- <button type="button" nextStep>Next Step</button>
+                  <button type="button" goToStep="2">Go directly to third Step</button> -->
+                  </wizard-step>
+                  <wizard-step stepTitle="Step 02" (stepEnter)=onStepEnter2()>
+                    <!-- <button type="button" previousStep>Go to previous step</button> -->
+
+                    <div class="post-request-step post-request-step2">
+                      <div>
+                        <button mat-icon-button mat-button previousStep>
+                          <i class="material-icons">arrow_back</i>
+                        </button>
+                        <h2 class="heading-text text-24">Where do you want to go?
+                          <span class="red-star">*</span>
+                        </h2>
+                        <mat-form-field class="brief-text-other">
+                          <span matPrefix class="i-text">I &nbsp;</span>
+                          <input type="text" class="other-text" matInput placeholder="Please enter your destination...">
+                          <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+                        </mat-form-field>
+                        <br/>
+                        <br/>
+                        <h6 class="bottom-border-header">Choose your region
+                          <span class="red-star">*</span>
+                        </h6>
+                        <!-- <mat-grid-list cols="2" rowHeight="2:1">
+                          <mat-grid-tile>1</mat-grid-tile>
+                          <mat-grid-tile>2</mat-grid-tile>
+                          <mat-grid-tile>3</mat-grid-tile>
+                          <mat-grid-tile>4</mat-grid-tile>
+                        </mat-grid-list> -->
+                        <!-- <div class="" style="height: 160px !important;"> -->
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                Europe and Britain
+                              </label>
+                            </div>
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                North and Central America
+                              </label>
+                            </div>
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                South America
+                              </label>
+                            </div>
+                            <!-- 
+                            <mat-list-item>
+                              <mat-checkbox class="city-state-list-text">Europe and Britain</mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                              <mat-checkbox class="city-state-list-text">North and Central America</mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                              <mat-checkbox class="city-state-list-text">South America</mat-checkbox>
+                            </mat-list-item> -->
+                          </div>
+                          <div class="col-md-6">
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                Africa and Middle East
+                              </label>
+                            </div>
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                Asia
+                              </label>
+                            </div>
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                Australia and South Pacific
+                              </label>
+                            </div>
+                            <!-- <mat-list-item>
+                              <mat-checkbox class="city-state-list-text"></mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                              <mat-checkbox class="city-state-list-text"></mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                              <mat-checkbox class="city-state-list-text"></mat-checkbox>
+                            </mat-list-item> -->
+                          </div>
+                        </div>
+                        <br/>
+                        <h6 class="bottom-border-header">Choose your countries
+                          <span class="red-star">*</span>
+                        </h6>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <h6 class="city-title">Europe and Britain</h6>
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                Spain
+                              </label>
+                            </div>
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                UK
+                              </label>
+                            </div>
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                France
+                              </label>
+                            </div>
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                Italy
+                              </label>
+                            </div>
+
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                Switzerland
+                              </label>
+                            </div>
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                Greece
+                              </label>
+                            </div>
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                Portugal
+                              </label>
+                            </div>
+
+
+                            <!-- <mat-list-item>
+                            </mat-list-item>
+                            <mat-list-item>
+                              <mat-checkbox class="city-state-list-text"></mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                              <mat-checkbox class="city-state-list-text"></mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                              <mat-checkbox class="city-state-list-text"></mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                              <mat-checkbox class="city-state-list-text"></mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                              <mat-checkbox class="city-state-list-text"></mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                              <mat-checkbox class="city-state-list-text"></mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                              <mat-checkbox class="city-state-list-text"></mat-checkbox>
+                            </mat-list-item> -->
+                          </div>
+                          <div class="col-md-6">
+                            <h6 class="city-title">Africa and Middle East</h6>
+
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                Egypt
+                              </label>
+                            </div>
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                Morocco
+                              </label>
+                            </div>
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                South Africa
+                              </label>
+                            </div>
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                Mauritius
+                              </label>
+                            </div>
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                Kenya
+                              </label>
+                            </div>
+                            <div>
+                              <label class="custom-checkbox-input">
+                                <input type="checkbox" />
+                                <span class="box"></span>
+                                Nigeria
+                              </label>
+                            </div>
+                            <!-- <mat-list-item>
+                            </mat-list-item>
+                            <mat-list-item>
+                              <mat-checkbox class="city-state-list-text"></mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                              <mat-checkbox class="city-state-list-text"></mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                              <mat-checkbox class="city-state-list-text"></mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                              <mat-checkbox class="city-state-list-text"></mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                              <mat-checkbox class="city-state-list-text"></mat-checkbox>
+                            </mat-list-item>
+                            <mat-list-item>
+                              <mat-checkbox class="city-state-list-text"></mat-checkbox>
+                            </mat-list-item> -->
+                          </div>
+                        </div>
+                        <hr/>
+                        <div class="clearfix">
+                          <div class="pull-right">
+                            <a routerLink="." (click)="openDialog()">view more</a>
+                          </div>
+                        </div>
+                        <!-- </div> -->
+
+                      </div>
+                      <div>
+                        <!-- <div class="" style="height: 160px;"></div> -->
+                        <h2 class="heading-text">Where do you live?
+                          <span class="red-star">*</span>
+                        </h2>
+                        <!-- <mat-form-field>
+                                        <mat-select placeholder="Favorite food">
+                                          <mat-option *ngFor="let food of foods" [value]="food.value">
+                                            {{ food.viewValue }}
+                                          </mat-option>
+                                        </mat-select>
+                                      </mat-form-field> -->
+                        <br/>
+                        <br/>
+                        <select class="light-gray-button btn country-button">
+                          <option>India</option>
+                          <option>Albania</option>
+                          <option>Algeria</option>
+                          <option>Bangladesh</option>
+                          <option>Bolivie</option>
+                        </select>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <mat-form-field class="brief-text-other inline-block">
+                          <span matPrefix class="i-text">I &nbsp;</span>
+                          <input type="text" class="other-text" matInput placeholder="City of residence">
+                          <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+                        </mat-form-field>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+
+                      </div>
+                      <div>
+
+                        <h2 class="heading-text">Select your departure city?
+                          <span class="red-star">*</span>
+                        </h2>
+
+                        <br/>
+                        <br/>
+                        <mat-form-field class="brief-text-other inline-block">
+                          <span matPrefix class="i-text">I &nbsp;</span>
+                          <input type="text" class="other-text" matInput placeholder="From">
+                          <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+                        </mat-form-field>
+                        <br/>
+                        <br/>
+                        <div>&nbsp;&nbsp;&nbsp;
+                          <!-- <mat-checkbox>same as city residence</mat-checkbox> -->
+                          <div>
+                            <label class="custom-checkbox-input">
+                              <input type="checkbox" />
+                              <span class="box"></span>
+                              same as city residence
+                            </label>
+                          </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                      </div>
+                      <div>
+                        <h2 class="heading-text">Select your departure city?
+                          <span class="red-star">*</span>
+                        </h2>
+
+                        <br/>
+                        <br/>
+                        <div>
+                          <p class="number-container">
+                            <span class="text"> Adults
+                              <span class="sub-text">(12+ years)</span>
+                            </span>
+                            <mat-form-field class="custom-number-input">
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <input class="duration-days-input" type="number" matInput placeholder="Favorite food" value="1" [min]="1">
+                            </mat-form-field>
+                          </p>
+                          <p class="number-container">
+                            <span class="text"> Children
+                              <span class="sub-text">(2-12 years)</span>
+                            </span>
+                            <mat-form-field class="custom-number-input">
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <input class="duration-days-input" type="number" matInput placeholder="Favorite food" value="1" [min]="1">
+                            </mat-form-field>
+                          </p>
+                          <p class="number-container">
+                            <span class="text"> Infants
+                              <span class="sub-text">(0-2 years)</span>
+                            </span>
+                            <mat-form-field class="custom-number-input">
+                              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                              <input class="duration-days-input" type="number" matInput placeholder="Favorite food" value="1" [min]="1">
+                            </mat-form-field>
+                          </p>
+                        </div>
+                        <hr/>
+
+                        <mat-form-field class="custom-number-input">
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <input class="duration-days-input" type="number" matInput placeholder="Favorite food" value="1" [min]="1"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <span>Number of senior citizens included above</span>
+                        </mat-form-field>
+                        <br/>
+                        <br/>
+                        <div class="text-right">
+                          <button mat-button nextStep class="btn-blue-gradient">Next</button>
+                        </div>
+                      </div>
+                      <div>&nbsp;</div>
+                      <!-- <div>&nbsp;</div> -->
+                      <div class="last"></div>
+                      <div class="last"></div>
+                    </div>
+
+                    <!-- <button type="button" nextStep>Go to next step</button> -->
+                  </wizard-step>
+                  <wizard-step stepTitle="Step 03" (stepEnter)=onStepEnter3()>
+
+                    <button mat-icon-button mat-button previousStep>
+                      <i class="material-icons">arrow_back</i>
+                    </button>
+                    <div class="post-request-step post-request-step3">
+                      <div>
+                        <h4 class="heading-text">Indicate your hotel and/or budget preferences
+                          <span class="red-star">*</span>
+                        </h4>
+                        <br/>
+                        <br/>
+                        <h5 class="heading-text">Hotel</h5>
+                        <br/>
+                        <div>&nbsp;&nbsp;&nbsp;
+                          <!-- <mat-checkbox>BnBa</mat-checkbox> -->
+                          <label class="custom-checkbox-input">
+                            <input type="checkbox" />
+                            <span class="box"></span>
+                            BnBa
+                          </label>
+                        </div>
+                        <div>&nbsp;&nbsp;&nbsp;
+                          <!-- <mat-checkbox>Upto 3 star</mat-checkbox> -->
+                          <label class="custom-checkbox-input">
+                            <input type="checkbox" />
+                            <span class="box"></span>
+                            Upto 3 star
+                          </label>
+                        </div>
+                        <div>&nbsp;&nbsp;&nbsp;
+                          <!-- <mat-checkbox>4/5 star</mat-checkbox> -->
+                          <label class="custom-checkbox-input">
+                            <input type="checkbox" />
+                            <span class="box"></span>
+                            4/5 star
+                          </label>
+                        </div>
+                        <div class="radios-container">
+                          <mat-radio-group class="example-radio-group">
+                            <mat-radio-button class="example-radio-button" *ngFor="let season of seasons" [value]="season">
+                              {{season}}
+                            </mat-radio-button>
+                          </mat-radio-group>
+                        </div>
+                        <!-- <mat-radio-group>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <mat-radio-button [value]="city-center">Close to city center (may be expensive)</mat-radio-button>
+                          <br/>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <mat-radio-button>Away from city center</mat-radio-button>
+                          <br/>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <mat-radio-button>Near train station</mat-radio-button>
+                          <br/>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                          <mat-radio-button>Near airport</mat-radio-button>
+                          <br/>
+                          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </mat-radio-group> -->
+                        <!-- <div>&nbsp;&nbsp;&nbsp;
+                          <mat-checkbox>same as city resdence</mat-checkbox>
+                        </div> -->
+                        <!-- <div>
+                          <button mat-button matStepperPrevious>Back</button>
+                        </div> -->
+                        <!-- <div id="slider-range"></div> -->
+                        <br/>
+                        <br/>
+                        <h5 class="heading-text">Budget (INR)
+                          <!-- <span class="red-star">*</span> -->
+                        </h5>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div class="custom-budget-slider">
+                          <div class="row">
+                            <input readonly type="text" class="minValue sliderValue col-xs-2" data-index="0" value="10000" />
+                            <div id="budgetSlider" class="budgetSlider col-xs-8"></div>
+                            <input readonly type="text" class="maxValue sliderValue col-xs-2" data-index="1" value="100000" />
+                          </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        <div>&nbsp;&nbsp;&nbsp;
+                          <mat-checkbox>Include flights in the offer</mat-checkbox>
+                        </div>
+                        <br/>
+                        <br/>
+                        <select class="light-gray-button btn country-button">
+                          <option>Economy</option>
+                          <option>Business</option>
+                          <option>First class</option>
+                        </select>
+                        <br/>
+                        <br/>
+                        <br/>
+                      </div>
+                      <div>
+                        <h4 class="heading-text">Choose your requirements
+                          <span class="red-star">*</span>
+                        </h4>
+                        <br/>
+                        <br/>
+                        <div>
+                          Food &nbsp;&nbsp;&nbsp;
+                          <select class="light-gray-button btn country-button">
+                            <option>Vegetables</option>
+                            <option>Grain foods</option>
+                            <option>Meats</option>
+                            <option>Poultry</option>
+                            <option>Eggs</option>
+                          </select>
+                        </div>
+                        <br/>
+                        <br/>
+                        <p>Any special requirements?</p>
+                        <mat-form-field class="brief-text-other">
+                          <span matPrefix class="i-text">I &nbsp;</span>
+                          <input type="text" class="other-text" matInput placeholder="Example: Include only pet friendly hotels">
+                          <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+                        </mat-form-field>
+                        <br/>
+                        <br/>
+                        <br/>
+                      </div>
+                      <div>
+                        <h4 class="heading-text">Whom would you like offers from?
+                          <span class="red-star">*</span>
+                        </h4>
+                        <h6 class="heading-text">(You can choose more than one)</h6>
+                        <br/>
+                        <br/>
+                        <div class="theme-boxes">
+                          <mat-checkbox class="theme-box offer-box">
+                            <span class="theme-text">Travel agencies in my city</span>
+                          </mat-checkbox>
+                          <mat-checkbox class="theme-box offer-box">
+                            <span class="theme-text">National travel agencies</span>
+                          </mat-checkbox>
+                          <mat-checkbox class="theme-box offer-box">
+                            <span class="theme-text">Travel agencies
+                              <br/> in my holiday destination</span>
+                          </mat-checkbox>
+                          <mat-checkbox class="theme-box offer-box">
+                            <span class="theme-text">Travel agencies in major metros</span>
+                          </mat-checkbox>
+                          <br/>
+                          <br/>
+                          <!-- <div class="text-right">
+                            <button mat-button matStepperNext class="btn-blue-gradient">Next</button>
+                          </div> -->
+                        </div>
+                        <!-- <mat-slider min="1" max="5" step="0.5" value="1.5"></mat-slider> -->
+                        <button mat-button nextStep class="btn-blue-gradient">Next</button>
+                      </div>
+                    </div>
+                    <div></div>
+                    <div></div>
+                    <!-- <button type="button" previousStep>previousStep </button>
+                    <button type="button" nextStep>nextStep </button> -->
+                  </wizard-step>
+                  <wizard-step stepTitle="Step 04" (stepEnter)=onStepEnter4()>
+                    Content of Step 4
+                    <button type="button" previousStep>previousStep </button>
+                    <button type="button" nextStep>nextStep </button>
+                  </wizard-step>
+                  <!-- <wizard-completion-step>
+                   Content of Step 5
+                  <button type="button" previousStep>previousStep </button>
+                  <button type="button" nextStep>nextStep </button>
+                  <button type="button">Finish</button>
+                </wizard-completion-step> -->
+                </wizard>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+</section>

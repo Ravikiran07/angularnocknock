@@ -1,0 +1,198 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+/* deeppurple-amber.css */
+/* indigo-pink.css */
+/* pink-bluegrey.css */
+/* purple-green.css */
+
+
+.font{
+    font-family: 'Poppins-Regular';
+    font-family: 'Poppins-Bold';
+    font-family: 'Poppins-Medium';
+    font-family: 'Poppins-Light'; 
+    font-family: 'Raleway-Italic';
+    font-family: 'Montserrat-Bold';
+    font-family: 'SourceSansPro-Regular';
+}
+
+
+.absolute{
+    position: absolute;
+}
+
+.text-blue-gradient {
+    background: -webkit-linear-gradient(to right, #7aadff, #3861E3, #3861E3, #249eda);
+    background: linear-gradient(to right, #7aadff, #3962e3, #3861E3, #249eda);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-family: 'Poppins-Bold';
+}
+
+.btn-white-like-gradient{
+    height: 45px;
+    width: 116px;
+    /* box-shadow: 0.07px -0.998px 24px 0px rgba(0, 0, 0, 0.13); */
+    outline: 0;
+    border: 0;
+    color: #5e81ef !important;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.btn-blue-gradient{
+    background: -webkit-linear-gradient(to right, #89adff, #4264e4);
+    background: linear-gradient(to right, #89adff, #4264e4);
+    font-family: 'Poppins-Medium';
+    height: 45px;
+    width: 116px;
+    box-shadow: 0.07px -0.998px 24px 0px rgba(0, 0, 0, 0.13);
+    outline: 0;
+    border: 0;
+    color: #fff !important;
+    font-size: 18px;
+    text-transform: capitalize;
+}
+
+.text-gray-gradient {
+    /* background: -webkit-linear-gradient(to right, #7aadff, #3861E3, #3861E3, #249eda);
+    background: linear-gradient(to right, #7aadff, #3962e3, #3861E3, #249eda); */
+    /* -webkit-background-clip: text; */
+    /* -webkit-text-fill-color: transparent; */
+    /* background-clip: text; */
+    font-family: 'Poppins-Bold';
+    color: #989898;
+    
+}
+
+.inline-block{
+    display: inline-block;
+}
+
+.navbar-brand {
+    padding: 0;
+    position: relative;
+}
+
+.logo-container {
+    /* width: 173px; */
+    /* height: 142px; */
+    display: inline-block;
+    background-color: #fff;
+    -moz-box-shadow: 1px 4px 15px rgba(51, 51, 51, 0.15);
+    -webkit-box-shadow: 1px 4px 15px rgba(51, 51, 51, 0.15);
+    box-shadow: 1px 4px 15px rgba(51, 51, 51, 0.15);
+    text-align: center;
+    padding: 0;
+    width: 90px;
+    height: 90px;
+}
+
+.logo-container .logo-img {
+    margin-top: 15px;
+    /*width: 80px;*/
+    /* width: 70%; */
+}
+
+.navbar-brand .logo-text {
+    font-family: 'Poppins-Medium';
+    font-size: 12px;
+    display: grid;
+    margin-left: -20px;
+    margin-top: 10px;
+    /* position: absolute; */
+}
+
+.navbar {
+    box-shadow: 0 0 0;
+    padding: 0;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    /*display: inline-block;*/
+    text-transform: capitalize;
+    padding: 0px 10px;
+    font-size: 18px;
+    font-family: 'Poppins-Regular';
+    /* font-family: 'Poppins-Medium'; */
+}
+
+.navbar-nav .nav-link.dark-blue-link {
+    color: #355b9a;
+    /* font-family: 'Montserrat-Bold'; */
+    font-family: 'Poppins-Bold';
+}
+
+.transparent-button{
+    color: #fff;
+    /* font-size: 13px; */
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.login-menu-button:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.login-menu i{
+    font-size: 18px;
+}
+
+.red-star{
+    color: red;
+}
+
+.light-gray-button{
+    background-color: #f6f8ff;
+    border-radius: 0;
+    box-shadow: 5px 0 5px #000;
+    background-color: rgb(246, 248, 255);
+    box-shadow: -0.174px 4.997px 5px 0px rgba(0, 0, 0, 0.06);
+    min-width: 119px;
+    height: 34px;
+    line-height: 1;
+    outline: 0;
+    padding-bottom: 0;
+    padding-top: 0;
+}
+
+/* :host >>>  .mat-dialog-container{
+    border-right: 5px solid red;
+}
+:host >>>  .md-dialog-container {
+      background-color: #000;
+      width: 250px;
+      height: 250px
+} */
+/* .cdk-overlay-container .cdk-overlay-backdrop + .cdk-overlay-pane  mat-dialog-container {
+      background-color: #000;
+      width: 250px;
+      height: 250px
+} */
+
+.city-title{
+    font-size: 12px;
+    color: #333333;
+    font-family: 'Poppins-Medium';
+}
+
+mat-dialog-container{
+    border-left: 4px solid #5a7ded;
+}
+.bottom-border-header{
+    font-size: 12px;
+    color: #333333;
+    font-family: 'Poppins-Medium';
+    border-bottom: 1px solid #e5e5e5;
+    padding: 10px;
+    padding-left: 0;
+    font-weight: 600;
+}
+
+.text-24{
+    font-size: 24px;
+}
+

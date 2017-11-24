@@ -1,0 +1,167 @@
+<mat-dialog-content>
+    <div class="row-container">
+        <div class="" *ngIf="!otpScreen">
+            <div class="row custom-row">
+                <div class="col-md-5 left-container">
+                    <div class="left-content-container">
+                        <div class="text-center">
+                            <p class="sub-title-text">Sign in to NockNock to complete your post</p>
+                            <br/>
+                            <button class="social-login-button login-with-facebook" mat-raised-button color="primary">
+                                <i class="fa fa-facebook" aria-hidden="true"></i> SIGN IN WITH FACEBOOK</button>
+                            <br/>
+                            <br/>
+                            <button class="social-login-button login-with-google" mat-raised-button color="warn">
+                                <i class="fa fa-google" aria-hidden="true"></i>SIGN IN WITH GOOGLE</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7 right-container">
+                    <div class="right-content-container">
+                        <div class="clearfix">
+                            <div class="pull-right">
+                                <img src="assets/images/redMarkRightTopToLeftBottom.png" />
+                            </div>
+                        </div>
+                        <div *ngIf="isLogin">
+                            <h2 class="heading-text">SIGN IN WITH EMAIL</h2>
+                            <br/>
+                            <form [formGroup]="loginForm" (submit)="loginUser()">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="boxes-container">
+                                            <div class="brief-text-other">
+                                                <span matPrefix class="i-text">I &nbsp;</span>
+                                                <input formControlName="name" type="text" class="other-text" matInput placeholder="Email ID/Mobile Number">
+                                                <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+                                            </div>
+                                            <br/>
+                                            <br/>
+                                            <div class="brief-text-other">
+                                                <!-- <span matPrefix class="i-text">I &nbsp;</span> -->
+                                                <input formControlName="password" type="password" class="other-text" matInput placeholder="Enter Password">
+                                                <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+                                            </div>
+                                            <div class="clearfix">
+                                                <a class="pull-right forgot-password-text">Forgot password?</a>
+                                            </div>
+                                            <br/>
+                                            <label class="custom-checkbox-input">
+                                                <input type="checkbox" />
+                                                <span class="box"></span>
+                                                Remember Me
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <br/>
+                                <br/>
+                                <button type="submit" [disabled]="!loginForm.valid" mat-button class="btn-blue-gradient login-button">SIGN IN TO NOCKNOCK</button>
+                                <br/>
+                                <br/>
+                                <P class="goto-signup-text">NOT A NOCKNOCK MEMBER YET?
+                                    <a class="goto-signup" (click)="gotoSignup()">SIGN UP</a>
+                                </P>
+                                <br/>
+                                <br/>
+                            </form>
+                        </div>
+                        <div *ngIf="!isLogin">
+                            <h2 class="heading-text">SIGN UP WITH EMAIL</h2>
+                            <br/>
+                            <form [formGroup]="signupForm" (submit)="signupUser()">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="boxes-container">
+                                            <div class="brief-text-other">
+                                                <span matPrefix class="i-text">I &nbsp;</span>
+                                                <input formControlName="email" type="email" class="other-text" matInput placeholder="Email ID">
+                                                <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+                                            </div>
+                                            <br/>
+                                            <br/>
+                                            <div class="brief-text-other">
+                                                <!-- <span matPrefix class="i-text">I &nbsp;</span> -->
+                                                <input formControlName="password" type="password" class="other-text" matInput placeholder="Enter Password">
+                                                <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="boxes-container">
+                                            <div class="brief-text-other">
+                                                <!-- <span matPrefix class="i-text">I &nbsp;</span> -->
+                                                <input formControlName="mobile" type="text" class="other-text" matInput placeholder="Mobile Number">
+                                                <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+                                            </div>
+                                            <br/>
+                                            <br/>
+                                            <div class="brief-text-other">
+                                                <!-- <span matPrefix class="i-text">I &nbsp;</span> -->
+                                                <input formControlName="cpassword" type="password" class="other-text" matInput placeholder="Confirm Password">
+                                                <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+                                            </div>
+                                            <br/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br/>
+                                <p class="simple-text">This information will be kept confidential.</p>
+
+                                <br>
+                                <button type="submit" [disabled]="!signupForm.valid" mat-button class="btn-blue-gradient login-button">SIGN UP WITH NOCKNOCK</button>
+                                <br/>
+                                <br/>
+                            </form>
+                            <p class="info-text">By signing up, you agree to our
+                                <a routerLink=".">Terms &amp; Conditions</a> and
+                                <a routerLink=".">Privacy Policy</a>
+                            </p>
+                            <br/>
+                            <br/>
+                            <P class="goto-signup-text">ALREADY A NOCKNOCK MEMBER?
+                                <a class="goto-signup" (click)="gotoLogin()">SIGN IN</a>
+                            </P>
+                            <br/>
+                            <br/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="otp-screen-container" *ngIf="otpScreen">
+            <button mat-icon-button mat-button (click)=gotoSignup()>
+                <i class="material-icons">arrow_back</i>
+            </button>
+            <br/>
+            <br/>
+            <P class="otp-title-text">We have sent you an access code
+                <br/> via SMS for mobile number verification</P>
+            <p class="small-title">Enter code here</p>
+
+            <div class="text-center">
+                <!-- <div class="otpScreen">
+                    <input type="text" class="otp-box" min="0" max="9"/>
+                    <input type="text" class="otp-box" min="0" max="9"/>
+                    <input type="text" class="otp-box" min="0" max="9"/>
+                    <input type="text" class="otp-box" min="0" max="9"/>
+                </div> -->
+                <div class="otpScreen">
+                    <input type="text" #otp1 class="otp-box" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next(otp2)" />
+                    <input type="text" #otp2 class="otp-box" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next(otp3)" />
+                    <input type="text" #otp3 class="otp-box" pattern="[0-9]{6}" maxlength="1" size="1" (keyup)="next(otp4)" />
+                    <input type="text" #otp4 class="otp-box" pattern="[0-9]{6}" maxlength="1" size="1" />
+
+                </div>
+
+                <br/>
+                <br/>
+                <button type="submit" mat-button class="btn-blue-gradient login-button" (click)="verifyOtp()">Verify mobile number</button>
+                <br/>
+                <br/>
+            </div>
+            <span class="resend-code-link">Resend code</span>
+        </div>
+    </div>
+</mat-dialog-content>

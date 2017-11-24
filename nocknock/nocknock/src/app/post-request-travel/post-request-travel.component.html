@@ -1,0 +1,415 @@
+<!-- <p>
+  post-request-travel works!
+</p> -->
+<section class="">
+  <section class="main">
+    <div class="header-wrapper">
+      <div class="container">
+        <header class="bg-color-white">
+          <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand" routerLink="/home">
+              <span class="logo-container">
+                <img src="assets/images/logo-small.png" class="logo-img" />
+              </span>
+              <span class="logo-text">Discover Buyer Power</span>
+            </a>
+            <button class="navbar-toggler navbar-toggler-right collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+                <!-- <li class="nav-item active">
+                      <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Link</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link disabled" href="#">Disabled</a>
+                    </li> -->
+              </ul>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <button type="button" class="btn btn-link transparent-button login-menu">
+                    Login &nbsp;&nbsp;&nbsp;
+                    <i class="fa fa-bars" aria-hidden="true"></i>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </nav>
+        </header>
+      </div>
+    </div>
+    <section class="page-content">
+      <img class="top-red-sticker" src="assets/images/redMark.png" />
+      <div class="left-container">
+        <div class="left-bg-image">
+          <!-- <img src="assets/images/never-stop-exploring-with-cup.jpg"/> -->
+        </div>
+        <div class="text-detail">
+          <p class="text">Let offers
+            <br/> come knocking...</p>
+          <img src="assets/images/red-blue-tilde.png" />
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5"></div>
+          <div class="col-md-7">
+            <div class="right-container">
+              <div class="right-content">
+                <wizard navBarLocation="right">
+                  <wizard-step stepTitle="Step 01" (stepEnter)=onStepEnter1()>
+                    <div class="post-request-step post-request-step1">
+                      <div>
+                        <h2 class="heading-text">Where do you want to travel?
+                          <span class="red-star">*</span>
+                        </h2>
+                        <!-- <br/> -->
+                        <div class="destination-boxes">
+                          <label class="destination-box" #selectIndia>
+                            <input type="radio" name="destination" [checked]='true' (click)="selectTravelDestination('India', selectIndia)">
+                            <img *ngIf="selectedDestination == 'India'" src="assets/images/destination-domestic2.png" />
+                            <img *ngIf="selectedDestination == 'International'" src="assets/images/destination-domestic3.png" />
+                            <span [ngClass]="(selectedDestination=='India')?'text-blue-gradient':'text-gray-gradient'" class="name">India</span>
+                          </label>
+                          <label class="destination-box" #selectInternational>
+                            <input type="radio" name="destination" (click)="selectTravelDestination('International', selectInternational)">
+                            <img *ngIf="selectedDestination == 'International'" src="assets/images/destination-international2.png" />
+                            <img *ngIf="selectedDestination == 'India'" src="assets/images/destination-international3.png" />
+                            <span [ngClass]="(selectedDestination=='India')?'text-gray-gradient':'text-blue-gradient'" class="name">International</span>
+                          </label>
+                          <!-- <a class="destination-box" href="#">
+                          <img src="assets/images/destination-domestic.png"/>
+                          <span>I want to explore <br/>both options</span>
+                        </a> -->
+                        </div>
+                      </div>
+
+                      <div>
+                        <h2 class="heading-text">Select dates
+                          <span class="red-star">*</span>
+                        </h2>
+                        <br/>
+                        <input id="datepicker-start-date" class="light-gray-button btn" placeholder="Start Date" />
+                        <!-- <mat-form-field>
+                          <input class="light-gray-button btn" [min]="minDate" [max]="maxDate" matInput [matDatepicker]="picker1" placeholder="Start Date">
+                          <mat-datepicker-toggle matPrefix [for]="picker1"></mat-datepicker-toggle>
+                          <mat-datepicker #picker1></mat-datepicker>
+                        </mat-form-field> -->
+                        <!-- <mat-form-field>
+                                          <input class="light-gray-button btn" [min]="minDate" [max]="maxDate" matInput [matDatepicker]="picker1" placeholder="End Date">
+                                          <mat-datepicker-toggle matSuffix [for]="picker1"></mat-datepicker-toggle>
+                                          <mat-datepicker #picker1></mat-datepicker>
+                                        </mat-form-field> -->
+                        &nbsp;&nbsp;
+                        <input id="datepicker-end-date" class="light-gray-button btn" placeholder="End Date" />
+                        <!-- <mat-form-field>
+                          <input class="light-gray-button btn" [min]="minDate" [max]="maxDate" matInput [matDatepicker]="picker2" placeholder="End Date">
+                          <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+                          <mat-datepicker #picker2></mat-datepicker>
+                        </mat-form-field> -->
+                        <br/>
+                        <br/>
+                        <div>&nbsp;&nbsp;&nbsp;
+                          <!-- <div *ngIf="select_month"> -->
+                          <div>
+                            <label class="custom-checkbox-input" (click)="onDatesFlexible()">
+                              <input type="checkbox" class="flexibleChk" />
+                              <span class="box"></span>
+                              My dates are flexible
+                            </label>
+                          </div>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div *ngIf="!start_date || !end_date">
+
+                          <h5 class="heading-text">
+                            If you are not sure of the dates,
+                            <br/> choose just a month
+                          </h5>
+                          <!-- <input id="datepicker-month" mode="month" class="light-gray-button btn" placeholder="Month" /> -->
+                          <!-- <dp-day-calendar></dp-day-calendar> -->
+                          <!-- <dp-day-calendar mode="month" enableMonthSelector="true"></dp-day-calendar> -->
+                          <!-- <mat-form-field>
+                            <input class="light-gray-button btn" [min]="minDate" [max]="maxDate" matInput [matDatepicker]="picker3" placeholder="Month">
+                            <mat-datepicker-toggle matPrefix [for]="picker3"></mat-datepicker-toggle>
+                            <mat-datepicker startView="year" #picker3></mat-datepicker>
+                          </mat-form-field> -->
+                          <input class="light-gray-button btn monthPicker" placeholder="Month" type="text" />
+                          <br/>
+                        </div>
+                        <br/>
+                        <p> Desired duration in days
+                          <span class="custom-number-input">
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            <input class="duration-days-input" type="number" matInput value="1" [min]="1">
+                          </span>
+                        </p>
+                        <br/>
+                        <br/>
+                      </div>
+                      <div>
+                        <h2 class="heading-text">What type of a holiday do you want?</h2>
+                        <h5 class="heading-text">(Select up to three themes)</h5>
+                        <div class="theme-boxes">
+                          <div class="theme-box">
+                            <label class="">
+                              <input type="checkbox" class="themeChk" (change)="onThemeChk()" value="Family Vacation" />
+                              <div class="sub-box">
+                                <div class="theme-image-container">
+                                  <img src="assets/images/theme-family-vacation.png" class="theme-img" />
+                                </div>
+                                <div class="theme-text">Family Vacation</div>
+                              </div>
+                            </label>
+                          </div>
+                          <!-- <mat-checkbox class="theme-box" MatCheckboxChange (change)="onThemeChk()">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-family-vacation.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Family Vacation</span>
+                          </mat-checkbox> -->
+                          <div class="theme-box">
+                            <label class="">
+                              <input type="checkbox" class="themeChk" (change)="onThemeChk()" value="Honeymoon" />
+                              <div class="sub-box">
+                                <div class="theme-image-container">
+                                  <img src="assets/images/theme-honeymoon.png" class="theme-img" />
+                                </div>
+                                <div class="theme-text">Honeymoon</div>
+                              </div>
+                            </label>
+                          </div>
+                          <!-- <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-honeymoon.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Honeymoon</span>
+                          </mat-checkbox> -->
+                          <div class="theme-box">
+                            <label class="">
+                              <input type="checkbox" class="themeChk" (change)="onThemeChk()" value="Spa &amp; Wellness" />
+                              <div class="sub-box">
+                                <div class="theme-image-container">
+                                  <img src="assets/images/theme-spa-and-wellness.png" class="theme-img" />
+                                </div>
+                                <div class="theme-text">Spa &amp; Wellness</div>
+                              </div>
+                            </label>
+                          </div>
+
+                          <!-- <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-spa-and-wellness.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Spa &amp; Wellness</span>
+                          </mat-checkbox> -->
+
+                          <div class="theme-box">
+                            <label class="">
+                              <input type="checkbox" class="themeChk" (change)="onThemeChk()" value="Adventure" />
+                              <div class="sub-box">
+                                <div class="theme-image-container">
+                                  <img src="assets/images/theme-adventure.png" class="theme-img" />
+                                </div>
+                                <div class="theme-text">Adventure</div>
+                              </div>
+                            </label>
+                          </div>
+
+                          <!-- <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-adventure.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Adventure</span>
+                          </mat-checkbox> -->
+
+                          <div class="theme-box">
+                            <label class="">
+                              <input type="checkbox" class="themeChk" (change)="onThemeChk()" value="Cruise" />
+                              <div class="sub-box">
+                                <div class="theme-image-container">
+                                  <img src="assets/images/theme-cruise.png" class="theme-img" />
+                                </div>
+                                <div class="theme-text">Cruise</div>
+                              </div>
+                            </label>
+                          </div>
+
+                          <!-- <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-cruise.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Cruise</span>
+                          </mat-checkbox> -->
+
+                          <div class="theme-box">
+                            <label class="">
+                              <input type="checkbox" class="themeChk" (change)="onThemeChk()" value="Educational" />
+                              <div class="sub-box">
+                                <div class="theme-image-container">
+                                  <img src="assets/images/theme-educational.png" class="theme-img" />
+                                </div>
+                                <div class="theme-text">Educational</div>
+                              </div>
+                            </label>
+                          </div>
+
+
+                          <!-- <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-educational.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Educational</span>
+                          </mat-checkbox> -->
+
+                          <div class="theme-box">
+                            <label class="">
+                              <input type="checkbox" class="themeChk" (change)="onThemeChk()" value="Mountains" />
+                              <div class="sub-box">
+                                <div class="theme-image-container">
+                                  <img src="assets/images/theme-mountains.png" class="theme-img" />
+                                </div>
+                                <div class="theme-text">Mountains</div>
+                              </div>
+                            </label>
+                          </div>
+
+                          <!-- <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-mountains.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Mountains</span>
+                          </mat-checkbox> -->
+
+                          <div class="theme-box">
+                            <label class="">
+                              <input type="checkbox" class="themeChk" (change)="onThemeChk()" value="Wildlife" />
+                              <div class="sub-box">
+                                <div class="theme-image-container">
+                                  <img src="assets/images/theme-wildlife.png" class="theme-img" />
+                                </div>
+                                <div class="theme-text">Wildlife</div>
+                              </div>
+                            </label>
+                          </div>
+
+                          <!-- <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-wildlife.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Wildlife</span>
+                          </mat-checkbox> -->
+
+                          <div class="theme-box">
+                            <label class="">
+                              <input type="checkbox" class="themeChk" (change)="onThemeChk()" value="Beach" />
+                              <div class="sub-box">
+                                <div class="theme-image-container">
+                                  <img src="assets/images/theme-beach.png" class="theme-img" />
+                                </div>
+                                <div class="theme-text">Beach</div>
+                              </div>
+                            </label>
+                          </div>
+                          <!-- <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-beach.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Beach</span>
+                          </mat-checkbox> -->
+
+                          <div class="theme-box">
+                            <label class="">
+                              <input type="checkbox" class="themeChk" (change)="onThemeChk()" value="Pilgrimage" />
+                              <div class="sub-box">
+                                <div class="theme-image-container">
+                                  <img src="assets/images/theme-pilgrimage.png" class="theme-img" />
+                                </div>
+                                <div class="theme-text">Pilgrimage</div>
+                              </div>
+                            </label>
+                          </div>
+                          <!-- <mat-checkbox class="theme-box">
+                            <div class="theme-image-container">
+                              <img src="assets/images/theme-pilgrimage.png" class="theme-img" />
+                            </div>
+                            <span class="theme-text">Pilgrimage</span>
+                          </mat-checkbox> -->
+
+                          <!-- <div class="theme-box">
+                            <label class="">
+                              <input type="checkbox" class="themeChk" (change)="onThemeChk()" value="Adventure" />
+                              <div class="sub-box">
+                                <div class="theme-image-container">
+                                  <img src="assets/images/theme-adventure.png" class="theme-img" />
+                                </div>
+                                <div class="theme-text">Adventure</div>
+                              </div>
+                            </label>
+                          </div> -->
+
+                          <a mat-button routerLink="." class="theme-view-more">View More</a>
+                          <!-- <div class="theme-box">
+                            <label class="box">
+                              <input type="checkbox">
+                              <img src="assets/images/theme-family-vacation.png" class="theme-img" />
+                              <span>Family Vacation</span>
+                            </label>
+                          </div> -->
+                        </div>
+                        <br/>
+                        <div>&nbsp;&nbsp;&nbsp;
+                          <!-- <mat-checkbox>Others :</mat-checkbox> -->
+                          <label class="custom-checkbox-input">
+                            <input type="checkbox" [checked]="others_holiday_type" (change)="onOtherChk()"/>
+                            <span class="box"></span>
+                            Others :
+                          </label>
+                        </div>
+                        <div>
+                          <mat-form-field class="brief-text-other">
+                            <span matPrefix class="i-text">I &nbsp;</span>
+                            <input type="text" class="other-text others_desc" matInput placeholder="Write in brief what you would like.">
+                            <!-- <mat-icon matSuffix>mode_edit</mat-icon> -->
+                          </mat-form-field>
+                          <br/>
+                          <br/>
+                          <div class="text-right">
+                            <button mat-button routerLink="/postRequestLive" class="btn-blue-gradient">Next</button>
+                          </div>
+                        </div>
+                      </div>
+                      <div>&nbsp;</div>
+                      <!-- <div>&nbsp;</div> -->
+                      <!-- <div class="last"></div> -->
+                      <!-- <div class="last"></div> -->
+                      <!-- <div>your content 5 </div> -->
+                      <!-- <div>your content 6 </div> -->
+                      <!-- <div>your content 7 </div> -->
+                      <!-- <div>your content 8 </div> -->
+
+                    </div>
+                    <!-- <button type="button" nextStep>Next Step</button>
+                  <button type="button" goToStep="2">Go directly to third Step</button> -->
+                  </wizard-step>
+                  <wizard-step>
+                  </wizard-step>
+                  <wizard-step>
+                  </wizard-step>
+                  <wizard-step>
+                  </wizard-step>
+                </wizard>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </section>
+</section>
